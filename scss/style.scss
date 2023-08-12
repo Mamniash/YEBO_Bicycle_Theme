@@ -1,0 +1,261 @@
+$fontfamily: "Lato";
+$minwidth: 320px;
+$fontsize: 0px;
+
+@import "_null";
+@import "_ul";
+@import "_header";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+.container {
+   max-width: 1130px;
+   padding: 0px 15px;
+   margin: 0px auto;
+}
+
+.wrapper {
+   overflow: hidden;
+   min-height: 100%;
+}
+
+.page {
+   // position: absolute;
+   // top: 0;
+   // left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.main-creen {
+   position: relative;
+   flex: 1 0 100%;
+
+   &__bg {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+   }
+}
+
+.content {
+   font-size: 40px;
+   //margin: 100vh 0px 0px 0px;
+}
+
+.generation {
+   padding: 120px 0px;
+   background-color: #f7f7f7;
+
+   &__block {}
+
+   @media (max-width: 900px) {
+      padding: 80px 0px;
+   }
+
+   @media (max-width: 600px) {
+      padding: 30px 0px;
+   }
+}
+
+.block {
+   text-align: center;
+   font-size: 18px;
+
+   &__icon {
+      margin: 0px 0px 33px 0px;
+   }
+
+   &__title {
+      color: #353738;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3.6px;
+      margin: 0px 0px 20px 0px;
+      line-height: 24px;
+   }
+
+   &__text {
+      color: #848789;
+      line-height: 34px;
+
+      &_j {
+         text-align: justify;
+         font-size: 16px;
+         line-height: 30px;
+
+         &:after {
+            content: '';
+            display: block;
+            margin: 35px auto 0px auto;
+            width: 50px;
+            height: 1px;
+            background-color: #b9b9b9;
+         }
+      }
+   }
+
+   @media (max-width: 1500px) {
+      &__text {
+         &_j {
+            &:after {
+               margin: 15px auto 0px auto;
+            }
+         }
+      }
+   }
+}
+
+.brands {
+
+   &__row {
+      display: flex;
+   }
+
+   &__rev {
+      .brands__column {
+         order: 1;
+
+         &_b {
+            order: 2;
+         }
+      }
+   }
+
+
+   &__column {
+      flex: 0 1 33.333%;
+
+      &_b {
+         flex: 0 1 66.667%;
+      }
+   }
+
+   &__item {}
+
+   &__content {
+      padding: 70px 65px 55px 65px;
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         margin: 0px 0px 0px -10px;
+         width: 0;
+         height: 0;
+         border-left: 10px solid transparent;
+         border-right: 10px solid transparent;
+         border-top: 10px solid #fff;
+      }
+   }
+
+   &__image {
+      padding: 0px 0px 37.51% 0px;
+   }
+
+   @media (max-width: 1500px) {
+      &__content {
+         padding: 40px 35px 30px 35px;
+      }
+   }
+
+   @media (max-width: 1100px) {
+      &__last {
+         .brands__column {
+            &:nth-child(1) {
+               order: 2;
+            }
+
+            &:nth-child(2) {
+               order: 1;
+            }
+
+            &:nth-child(3) {
+               order: 3;
+            }
+         }
+      }
+
+      &__row {
+         flex-direction: column;
+      }
+   }
+}
+
+.item {
+   height: 100%;
+   display: block;
+   position: relative;
+
+   &__logo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      transition: all 0.3s ease 0s;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+   }
+
+   &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+
+   &:hover {
+      .item__logo {
+         background-color: rgba(100, 194, 158, 0.5);
+      }
+   }
+
+   @media (max-width: 1100px) {
+      height: auto;
+      padding: 0px 0px 50% 0px;
+   }
+}
+
+.slider {
+   background-color: #f7f7f7;
+   padding: 120px 0px 60px 0px;
+   text-align: center;
+
+   &__body {}
+
+   &__item {}
+
+   &__icon {
+      margin: 0 0 35px 0;
+   }
+
+   &__title {
+      margin: 0 0 20px 0;
+      color: #353738;
+      font-size: 18px;
+      font-weight: 700;
+
+      span {
+         font-weight: 300;
+         color: #848789;
+      }
+   }
+
+   &__text {
+      color: #848789;
+      font-size: 24px;
+      font-style: italic;
+      line-height: 34px;
+   }
+}
+
+.container {}
