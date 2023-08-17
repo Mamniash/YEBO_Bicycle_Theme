@@ -535,6 +535,7 @@ h6 {
   background-color: #f7f7f7;
   padding: 120px 0px 60px 0px;
   text-align: center;
+  position: relative;
 }
 .slider__icon {
   margin: 0 0 35px 0;
