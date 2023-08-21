@@ -227,7 +227,7 @@ $fontsize: 0px;
 
 .slider {
    background-color: #f7f7f7;
-   padding: 120px 0px 60px 0px;
+   padding: 120px 0 140px 0px;
    text-align: center;
    position: relative;
 
@@ -256,5 +256,17 @@ $fontsize: 0px;
       font-size: 24px;
       font-style: italic;
       line-height: 34px;
+   }
+
+   &__pagination {
+      padding: 0 0 70px 0;
+   }
+
+   @media (max-width: 767px) {
+      padding: 60px 0 100px 0;
+
+      &__pagination {
+         padding: 0 0 40px 0;
+      }
    }
 }
